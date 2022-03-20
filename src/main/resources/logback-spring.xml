@@ -39,9 +39,8 @@
         <appender-ref ref="Console" />
     </root>
     <!-- Java 패키지 -->
-    <!--    <logger name="dev.aquashdw" level="trace" additivity="false">-->
-    <!--        <appender-ref ref="RollingFile" />-->
-    <!--        <appender-ref ref="Console" />-->
-    <!--    </logger>-->
+       <logger name="com.misson.mission3.aspect" level="trace" additivity="false">
+            <appender-ref ref="Console" />
+        </logger>
 
 </configuration>
