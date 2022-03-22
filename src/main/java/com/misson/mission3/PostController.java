@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -29,7 +30,7 @@ public class PostController {
 
     @PostMapping()
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public void  createPost(@RequestBody PostDto dto){
+    public void createPost(@Valid @RequestBody PostDto dto){
         this.postService.createPost(dto);
     }
 

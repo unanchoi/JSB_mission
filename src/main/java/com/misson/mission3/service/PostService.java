@@ -2,6 +2,7 @@ package com.misson.mission3.service;
 
 import com.misson.mission3.PostDao;
 import com.misson.mission3.entity.Post;
+import com.misson.mission3.repository.PostRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -66,7 +67,7 @@ public class PostService {
         if (targetEntity.isEmpty()){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
-        this.postRepository.delete(targetEntity.get())
+        this.postRepository.delete(targetEntity.get());
     }
 
 
